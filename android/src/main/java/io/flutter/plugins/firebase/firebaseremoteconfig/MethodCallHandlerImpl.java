@@ -41,8 +41,7 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
           properties.put("lastFetchTime", firebaseRemoteConfigInfo.getFetchTimeMillis());
           properties.put(
               "lastFetchStatus", mapLastFetchStatus(firebaseRemoteConfigInfo.getLastFetchStatus()));
-          properties.put(
-              "inDebugMode", firebaseRemoteConfigInfo.getConfigSettings().isDeveloperModeEnabled());
+          properties.put("inDebugMode", false);
           properties.put("parameters", getConfigParameters());
           result.success(properties);
           break;
